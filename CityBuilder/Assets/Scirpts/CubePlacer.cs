@@ -21,7 +21,7 @@ public class CubePlacer : MonoBehaviour
             }
         }
     }
-    private void PlaceCubeNear(Vector3.clickPoint)
+    private void PlaceCubeNear(Vector3 clickPoint)
     {
         var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
         GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;

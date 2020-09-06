@@ -5,6 +5,7 @@ using UnityEngine;
 public class CubePlacer : MonoBehaviour
 {
     private Grid grid;
+    public GameObject Prefab;
     private void Awake()
     {
         grid = FindObjectOfType<Grid>();
@@ -24,7 +25,7 @@ public class CubePlacer : MonoBehaviour
     private void PlaceCubeNear(Vector3 clickPoint)
     {
         var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
-        GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;
+        GameObject.Instantiate(Prefab).transform.position = finalPosition;
     }
     // Start is called before the first frame update
     void Start()

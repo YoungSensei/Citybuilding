@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public int Stone;
     public int Fish;
 
+    public List<GameObject> Buildings; //Test Variable
+    public int BNum;
     public bool TurnEnded;
     int TempMod;
     public void EndTurn()
@@ -60,7 +62,22 @@ public class GameManager : MonoBehaviour
                 TempMod = Mathf.RoundToInt(BGain * FishMod);
                 break;
         }
-        Debug.Log("Value Returned: " + TempMod + " from case Value: "+ WRes);
+        Debug.Log("Value Returned: " + TempMod + " from case Value: " + WRes);
         return TempMod;
+    }
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            //This is for CubePlacer Test
+            BNum++;
+            if (Buildings.Count <= BNum)
+            {
+                BNum = 0;
+            }
+          
+            FindObjectOfType<CubePlacer>().Prefab = Buildings[BNum];
+
+        }
     }
 }

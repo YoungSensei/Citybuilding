@@ -17,7 +17,7 @@ public class CubePlacer : MonoBehaviour
             RaycastHit hitInfo;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if(Physics.Raycast(ray, out hitInfo)){
+            if(Physics.Raycast(ray, out hitInfo) && hitInfo.collider.tag != "Resource"){
                 PlaceCubeNear(hitInfo.point);
             }
         }

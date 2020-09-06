@@ -12,7 +12,7 @@ public class CubePlacer : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Prefab != null)
         {
             RaycastHit hitInfo;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -25,14 +25,9 @@ public class CubePlacer : MonoBehaviour
     private void PlaceCubeNear(Vector3 clickPoint)
     {
         var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
-        GameObject.Instantiate(Prefab).transform.position = finalPosition;
+        if (FindObjectOfType<GameManager>().CanPlace())
+        {
+            Instantiate(Prefab).transform.position = finalPosition;
+        }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-
 }

@@ -13,9 +13,11 @@ public class GameManager : MonoBehaviour
     public int Wood;
     public int Stone;
     public int Fish;
-
-    public List<GameObject> Buildings; //Test Variable
-    public int BNum;
+    [Header("ToTake")]
+    public int STake;
+    public int WTake;
+    //public List<GameObject> Buildings; //Test Variable
+    //public int BNum;
     public bool TurnEnded;
     int TempMod;
     public void EndTurn()
@@ -65,19 +67,38 @@ public class GameManager : MonoBehaviour
         Debug.Log("Value Returned: " + TempMod + " from case Value: " + WRes);
         return TempMod;
     }
-    public void Update()
+    public void TakeAway(int Ston,int Woo)
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        //Only for test purpose to showcase amount being taken
+        STake = Ston;
+        WTake = Woo;
+    }
+    public bool CanPlace()
+    {
+        if(Stone - STake >= 0 && Wood - WTake >= 0)
         {
-            //This is for CubePlacer Test
-            BNum++;
-            if (Buildings.Count <= BNum)
-            {
-                BNum = 0;
-            }
-          
-            FindObjectOfType<CubePlacer>().Prefab = Buildings[BNum];
-
+             Stone -= STake;
+             Wood -= WTake;
+             return true;
+        }
+        else
+        {
+            return false;
         }
     }
+    //public void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.G))
+    //    {
+    //        //This is for CubePlacer Test
+    //        BNum++;
+    //        if (Buildings.Count <= BNum)
+    //        {
+    //            BNum = 0;
+    //        }
+          
+    //        FindObjectOfType<CubePlacer>().Prefab = Buildings[BNum];
+
+    //    }
+    //}
 }

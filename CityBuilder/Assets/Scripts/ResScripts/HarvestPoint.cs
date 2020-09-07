@@ -6,13 +6,14 @@ public class HarvestPoint : MonoBehaviour
 {
     public Resource MyResource;
     public int resLeft = 100;
-    public int WhiRes;
+    public string WhiRes;
     public bool Harvested = false;
     GameManager GM;
     int TempAmount;
     private void Awake()
     {
         GM = FindObjectOfType<GameManager>();
+        WhiRes = MyResource.Name;
     }
     private void OnMouseOver()
     {
@@ -24,6 +25,7 @@ public class HarvestPoint : MonoBehaviour
         if (GM.Harvesters > 0)
         {
             GM.Harvesters -= 1;
+            GM.Harv.text = "Labor Left: " + GM.Harvesters.ToString();
             Harvested = true;
         }
         else
@@ -39,7 +41,7 @@ public class HarvestPoint : MonoBehaviour
         if (hold >= 0)
         {
             resLeft -= TempAmount;
-            Debug.Log("Give player Resource: " + MyResource.Name + " amount given: " + TempAmount);
+            //Debug.Log("Give player Resource: " + MyResource.Name + " amount given: " + TempAmount);
             GM.AddRes(WhiRes, TempAmount);
             //Harvested = false;
             //GM.TurnEnded = false;       

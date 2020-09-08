@@ -8,8 +8,9 @@ public class Resource : ScriptableObject
 {
     public string Name;
     public Sprite icon;
-    public int MinAmount;
-    public int MaxAmount;
+    public int MinAmountToSpawn;
+    public int MaxAmountToSpawn;
+    public int MaxCountToStore;
 
     public virtual void UseResource ()
     {

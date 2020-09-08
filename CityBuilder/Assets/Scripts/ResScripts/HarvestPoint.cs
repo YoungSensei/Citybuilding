@@ -35,7 +35,7 @@ public class HarvestPoint : MonoBehaviour
     }
     public void Results()
     {
-        int ResGain = Random.Range(MyResource.MinAmount, MyResource.MaxAmount);
+        int ResGain = Random.Range(MyResource.MinAmountToSpawn, MyResource.MaxAmountToSpawn);
         TempAmount = GM.Modifiers(WhiRes, ResGain) + ResGain;
         int hold = resLeft - TempAmount;
         if (hold >= 0)

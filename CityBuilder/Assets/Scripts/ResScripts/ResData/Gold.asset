@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Gold
   icon: {fileID: 21300000, guid: 5b18edee80fa94b47ba20cc6492f44f5, type: 3}
-  MinAmount: 1
-  MaxAmount: 3
+  MinAmountToSpawn: 1
+  MaxAmountToSpawn: 3
+  MaxCountToStore: 10

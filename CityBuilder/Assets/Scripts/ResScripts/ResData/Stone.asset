@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Stone
   icon: {fileID: 21300000, guid: 3a5155e3b5e175247b7196088b89894c, type: 3}
-  MinAmount: 1
-  MaxAmount: 5
+  MinAmountToSpawn: 1
+  MaxAmountToSpawn: 5
+  MaxCountToStore: 30

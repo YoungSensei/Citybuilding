@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6db7c914df2d96d4990c15161c67d02c, type: 3}
-  m_Name: Stone
+  m_Name: Gold
   m_EditorClassIdentifier: 
-  Name: Stone
-  icon: {fileID: 21300000, guid: 3a5155e3b5e175247b7196088b89894c, type: 3}
+  Name: Gold
+  icon: {fileID: 21300000, guid: 5b18edee80fa94b47ba20cc6492f44f5, type: 3}
   MinAmount: 1
-  MaxAmount: 5
+  MaxAmount: 3

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db7c914df2d96d4990c15161c67d02c, type: 3}
   m_Name: Gold
   m_EditorClassIdentifier: 
-  Name: 
-  MinAmount: 0
-  MaxAmount: 0
+  Name: Gold
+  icon: {fileID: 0}
+  MinAmount: 1
+  MaxAmount: 3

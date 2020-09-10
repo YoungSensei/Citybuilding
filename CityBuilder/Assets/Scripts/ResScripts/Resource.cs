@@ -6,6 +6,15 @@ using UnityEngine;
 public class Resource : ScriptableObject
 {
     public string Name;
+
+    public Sprite icon;
     public int MinAmount;
     public int MaxAmount;
+
+    public virtual void UseResource ()
+    {
+        //Usage of the resource
+
+        Debug.Log("Using " + Name);
+    }
 }

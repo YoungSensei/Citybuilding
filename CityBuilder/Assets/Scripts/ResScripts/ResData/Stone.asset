@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   Name: Stone
+<<<<<<< HEAD
+=======
+  icon: {fileID: 21300000, guid: 3a5155e3b5e175247b7196088b89894c, type: 3}
+>>>>>>> parent of b1aecab... Update to Resources
   MinAmount: 1
   MaxAmount: 5

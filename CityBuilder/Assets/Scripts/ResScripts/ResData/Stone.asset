@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6db7c914df2d96d4990c15161c67d02c, type: 3}
   m_Name: Stone
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: Stone
   MinAmount: 1
   MaxAmount: 5
